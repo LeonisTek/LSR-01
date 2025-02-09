@@ -178,7 +178,7 @@ LSR-01是一款透過內建類神經網路處理器及32-bit CPU的AI語音辨�
 
 本模組具有5組輸出接腳可進行使用,可使用命令進行開/關或切換的動作,可直接控制繼電器模組來做  各種控制,如電燈、風扇等設備。
 
-![圖片2](https://hackmd.io/_uploads/B1MMz4LY1g.png)
+![lsr01_relay.png](https://github.com/LeonisTek/LSR-01/blob/main/PIC/lsr01_relay.png)
 
     註:D3及D4接腳於模組上電時會有大約1秒的時間為高電位,因此可能導致繼電器被開啟1秒,
     建議若不需用到3支以上接腳請優先使用D0~D2,或考慮改用其他方式
@@ -191,7 +191,7 @@ LSR-01是一款透過內建類神經網路處理器及32-bit CPU的AI語音辨�
 
 #### 接線圖:
 
-![圖片3](https://hackmd.io/_uploads/Hy1ZrVUYJx.png)
+![lsr01_nano.png]([https://hackmd.io/_uploads/Hy1ZrVUYJx.png](https://github.com/LeonisTek/LSR-01/blob/main/PIC/lsr01_nano.png))
 
 
 #### 程式碼:
