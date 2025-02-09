@@ -1,6 +1,6 @@
 # LSR-01 離線式語音辨識模組 
 
-![lsr01.png][https://hackmd.io/_uploads/rkjF97IYyx.png](https://github.com/LeonisTek/LSR-01/blob/main/PIC/lsr01.png)
+![lsr01.png][https://github.com/LeonisTek/LSR-01/blob/main/PIC/lsr01.png]
 
 ## 簡介
 LSR-01是一款透過內建類神經網路處理器及32-bit CPU的AI語音辨識模組,搭載預先訓練的語言模型,不須連接網路即可離線使用,可達到即時語音辨識目的。
