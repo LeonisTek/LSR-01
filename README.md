@@ -191,7 +191,7 @@ LSR-01是一款透過內建類神經網路處理器及32-bit CPU的AI語音辨�
 
 #### 接線圖:
 
-![lsr01_nano.png]([https://hackmd.io/_uploads/Hy1ZrVUYJx.png](https://github.com/LeonisTek/LSR-01/blob/main/PIC/lsr01_nano.png))
+![lsr01_nano.png](https://github.com/LeonisTek/LSR-01/blob/main/PIC/lsr01_nano.png)
 
 
 #### 程式碼:
