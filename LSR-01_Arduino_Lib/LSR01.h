@@ -22,7 +22,7 @@ public:
   LSR01(byte RX_PIN, byte TX_PIN);
 
   ~LSR01();
-  void Init();
+  void begin();
 
   byte GetCMD(uint8_t* voicecmd);
   

@@ -2,6 +2,9 @@
 	Arduino library for LSR-01 AI Speech Recognition Module
 
 	Designed by LEONIS TECHNOLOGY CO., LTD.  28.JAN.2025
+	
+	Rev. A1 03.MAR.2025 : 修改命令回傳編號
+	Rev. A2 09.MAR.2025 : 修改init命令
 
 */
 #include "LSR01.h"
@@ -24,7 +27,7 @@ LSR01::LSR01(byte RX_PIN, byte TX_PIN) {
 
 }
 
-void LSR01::Init() {
+void LSR01::begin() {
 
 
   LSR_M01_UART->begin(9600);
@@ -64,67 +67,67 @@ byte LSR01::GetCMD(uint8_t* voicecmd) {
     LSR_M01_stringComplete = false;
 
     //判斷指令內容
-    if (LSR_M01_Voice_CMD == "#R10") {
+    if (LSR_M01_Voice_CMD == "#R11") {
       *voicecmd = 1;
-    } else if (LSR_M01_Voice_CMD == "#R11") {
+    } else if (LSR_M01_Voice_CMD == "#R10") {
       *voicecmd = 2;
-    } else if (LSR_M01_Voice_CMD == "#R20") {
-      *voicecmd = 3;
     } else if (LSR_M01_Voice_CMD == "#R21") {
+      *voicecmd = 3;
+    } else if (LSR_M01_Voice_CMD == "#R20") {
       *voicecmd = 4;
-    } else if (LSR_M01_Voice_CMD == "#R30") {
-      *voicecmd = 5;
     } else if (LSR_M01_Voice_CMD == "#R31") {
+      *voicecmd = 5;
+    } else if (LSR_M01_Voice_CMD == "#R30") {
       *voicecmd = 6;
-    } else if (LSR_M01_Voice_CMD == "#R40") {
-      *voicecmd = 7;
     } else if (LSR_M01_Voice_CMD == "#R41") {
+      *voicecmd = 7;
+    } else if (LSR_M01_Voice_CMD == "#R40") {
       *voicecmd = 8;
-    } else if (LSR_M01_Voice_CMD == "#R50") {
-      *voicecmd = 9;
     } else if (LSR_M01_Voice_CMD == "#R51") {
+      *voicecmd = 9;
+    } else if (LSR_M01_Voice_CMD == "#R50") {
       *voicecmd = 10;
-    } else if (LSR_M01_Voice_CMD == "#R60") {
-      *voicecmd = 11;
     } else if (LSR_M01_Voice_CMD == "#R61") {
+      *voicecmd = 11;
+    } else if (LSR_M01_Voice_CMD == "#R60") {
       *voicecmd = 12;
-    } else if (LSR_M01_Voice_CMD == "#R70") {
-      *voicecmd = 13;
     } else if (LSR_M01_Voice_CMD == "#R71") {
+      *voicecmd = 13;
+    } else if (LSR_M01_Voice_CMD == "#R70") {
       *voicecmd = 14;
-    } else if (LSR_M01_Voice_CMD == "#R80") {
-      *voicecmd = 15;
     } else if (LSR_M01_Voice_CMD == "#R81") {
+      *voicecmd = 15;
+    } else if (LSR_M01_Voice_CMD == "#R80") {
       *voicecmd = 16;
-    } else if (LSR_M01_Voice_CMD == "#R90") {
-      *voicecmd = 17;
     } else if (LSR_M01_Voice_CMD == "#R91") {
+      *voicecmd = 17;
+    } else if (LSR_M01_Voice_CMD == "#R90") {
       *voicecmd = 18;
-    } else if (LSR_M01_Voice_CMD == "#RA0") {
-      *voicecmd = 19;
     } else if (LSR_M01_Voice_CMD == "#RA1") {
+      *voicecmd = 19;
+    } else if (LSR_M01_Voice_CMD == "#RA0") {
       *voicecmd = 20;
 	}
 	//------------------------------------------
-	else if (LSR_M01_Voice_CMD == "#RB0") {
+	else if (LSR_M01_Voice_CMD == "#RB1") {
       *voicecmd = 21;
-    } else if (LSR_M01_Voice_CMD == "#RB1") {
+    } else if (LSR_M01_Voice_CMD == "#RB0") {
       *voicecmd = 22;
-    } else if (LSR_M01_Voice_CMD == "#RC0") {
-      *voicecmd = 23;
     } else if (LSR_M01_Voice_CMD == "#RC1") {
+      *voicecmd = 23;
+    } else if (LSR_M01_Voice_CMD == "#RC0") {
       *voicecmd = 24;
-    } else if (LSR_M01_Voice_CMD == "#RD1") {
-      *voicecmd = 25;
     } else if (LSR_M01_Voice_CMD == "#RD0") {
+      *voicecmd = 25;
+    } else if (LSR_M01_Voice_CMD == "#RD1") {
       *voicecmd = 26;
-    } else if (LSR_M01_Voice_CMD == "#RE1") {
-      *voicecmd = 27;
     } else if (LSR_M01_Voice_CMD == "#RE0") {
+      *voicecmd = 27;
+    } else if (LSR_M01_Voice_CMD == "#RE1") {
       *voicecmd = 28;
-    } else if (LSR_M01_Voice_CMD == "#RF1") {
-      *voicecmd = 29;
     } else if (LSR_M01_Voice_CMD == "#RF0") {
+      *voicecmd = 29;
+    } else if (LSR_M01_Voice_CMD == "#RF1") {
       *voicecmd = 30;
     }
 	//------------------------------------------
